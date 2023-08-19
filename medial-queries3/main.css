@@ -1,3 +1,78 @@
 body {
-  background: peachpuff;
+    background: lightgray;
 }
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    margin: 10px;
+}
+
+.a {
+    height: 1em;
+    border: 2px solid darkgray;
+    background-color: rgb(185, 185, 185);
+    min-height: 20vh;
+    flex-grow: 1;
+    margin-top: 10px;
+}
+.b, .c, .d, .e, .f, .g {
+    height: 1em;
+    border: 2px solid darkgray;
+    background-color: rgb(185, 185, 185);
+    min-height: 20vh;
+    display: block;
+    width: 30%;
+}
+
+.bcd {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.efg {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.h {
+    height: 2em;
+    border: 2px solid darkgray;
+    background-color: rgb(185, 185, 185);
+    min-height: 40vh;
+    flex-grow: 1;
+    margin-top: 10px;
+}
+
+@media (min-width: 600px) {
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .a {
+        width: 100%;
+        margin-bottom: -150px;
+    }
+    .h {
+        height: 2em;
+        max-width: 22%;
+    }
+    .b, .c, .d, .e, .f, .g {
+        width: 22vw;
+        height: 1em;
+        margin-right: 10px;
+
+    }
+    .bcdefgh {
+        width: 100%;
+    }
